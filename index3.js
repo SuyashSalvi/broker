@@ -377,6 +377,8 @@ app.post('/publishData', (req, res) => {
     try{
         const postData = req.body;
         console.log(postData);
+        console.log(postData.publishSector);
+        console.log(serverQueue[postData.publishSector]);
         const server = serverQueue[postData.publishSector].trim().split(":");
         var options = {
             hostname: server[0],
