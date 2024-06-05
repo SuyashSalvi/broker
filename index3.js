@@ -376,6 +376,7 @@ app.get('/balanceQueues', async (req, res) => {
 app.post('/publishData', (req, res) => {
     try{
         const postData = req.body;
+        console.log(postData);
         const server = serverQueue[postData.publishSector].trim().split(":");
         var options = {
             hostname: server[0],
